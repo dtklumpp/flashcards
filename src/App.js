@@ -3,13 +3,13 @@ import Header from './components/Header';
 import FlashcardContainer from './components/FlashcardContainer';
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <Header/>
-        <FlashcardContainer/>
+        <Header />
+        <FlashcardContainer />
       </div>
-    )
+    );
   }
 }
 
