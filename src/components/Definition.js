@@ -1,10 +1,10 @@
 import React from 'react';
 
-let Definition = (props) => {
+const Definition = (props) => {
 
 	return (
 		<div>
-      Definition
+			Definition
 		</div>
 	)
 };
