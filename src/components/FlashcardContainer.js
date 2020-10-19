@@ -8,21 +8,33 @@ class FlashcardContainer extends Component {
     flashcards: [],
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     console.log('[FlashcardContainer] mounted');
     // setTimeout(() => {this.setState({
     //   flashcards: ['test']
     // })}, 2000)
 
     // fetch
-    fetch(CLIENT_URL)
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
+    // fetch(CLIENT_URL)
+    //   .then(response => response.json())
+    //   .then(json => {
+    //     console.log(json)
+    //     this.setState({
+    //       flashcards: json
+    //     })
+    //   })
+    //   .catch(err => console.log(err))
+
+    // axios
+    axios.get(CLIENT_URL)
+      .then(response => {
+        console.log(response)
         this.setState({
-          flashcards: json
+          flashcards: response.data
         })
       })
+      .catch(err => console.log(err))
+
   }
 
   render() {
