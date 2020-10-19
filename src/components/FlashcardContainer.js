@@ -68,7 +68,7 @@ class FlashcardContainer extends Component {
     return(
       <div>
         {this.state.flashcards.length > 0 ?
-          <Flashcard detail={flashcards[currentIndex]} /> :
+          <Flashcard detail={flashcards[currentIndex]} next={this.goToNextCard} /> :
           <h3>Loading...</h3>
         }
         <button onClick={this.goToPrevCard}>Prev</button>
